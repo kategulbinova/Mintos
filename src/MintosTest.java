@@ -92,9 +92,9 @@ public class MintosTest {
         assertTrue(listOfFoundItems.size() > 0, "Expected to find mopre than 0 items with the search string " + searchString);
         Reporter.log("List of found items is " + listOfFoundItems.size() + " pcs long.");
 
-        listOfFoundItems.get((int)(Math.random() * listOfFoundItems.size() + 1)).click();
-        
         Reporter.log("Add one random item to bag.");
+        listOfFoundItems.get((int)(Math.random() * listOfFoundItems.size())).click();
+        
         itemPage.chooseSize();
         itemPage.addItem();
         itemPage.goToBag();  
